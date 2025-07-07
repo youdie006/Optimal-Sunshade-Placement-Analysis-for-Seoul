@@ -1,4 +1,4 @@
-# 🌞 Optimal Sunshade Placement Analysis for Seoul
+# ⛱️ Optimal Sunshade Placement Analysis for Seoul
 
 A data-driven analysis to identify the **optimal locations for sunshade installation** in Seoul, using **Landsat-8 satellite imagery** and **vulnerability data**.  
 This project aims to reduce the impact of **urban heat islands** by prioritizing areas with high land surface temperatures (LST) and vulnerable populations.
