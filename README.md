@@ -8,7 +8,8 @@ This project aims to reduce the impact of **urban heat islands** by prioritizing
 ## 📌 Project Overview
 
 - **Title:** 그늘막 설치 위치 최적화 분석  
-- **Date:** June 2025 (for 고려대학교 데이터시각화 과제)
+- **Team:** 공병승, 이문교, 임윤영  
+- **Date:** June 2025 (Project for the 'Data Visualitzation' graduate course)
 
 With record-breaking heatwaves becoming more frequent, protecting heat-vulnerable populations through smart infrastructure planning (e.g., sunshades) is becoming increasingly vital.  
 This project proposes a method to **quantitatively evaluate sunshade necessity** and **visualize hot zones** across Seoul.
@@ -29,6 +30,21 @@ You can view the script here:
 
 ---
 
+## 📄 Full Presentation (PDF)
+
+You can view the full project presentation slides (Korean) here:
+
+📂 [`report/Presentation.pdf`](./report/Presentation.pdf)
+
+It contains:
+- Background on heatwaves in Seoul
+- Data sources and preprocessing
+- Definition of the **Shade Need Index (SNI)**
+- K-means clustering results and map visuals
+- Final selection of sunshade installation sites
+
+---
+
 ## 🗂️ Data Sources
 
 | Category | Source |
@@ -44,34 +60,27 @@ You can view the script here:
 
 1. **Preprocessing**
    - Remove missing LST pixels
-   - Aggregate temperature stats by dong (max, mean, percentiles)
+   - Aggregate temperature stats by dong
 2. **Feature Engineering**
-   - Calculate temperature variation index: `p90 - p50`
-   - Normalize with StandardScaler
-3. **Define SNI (Shade Need Index)**  
+   - Calculate temp variation: `p90 - p50`
+   - Normalize using StandardScaler
+3. **Shade Need Index (SNI)**  
    `SNI = 0.5 × max + 0.3 × mean + 0.2 × temp_variation`
-4. **Clustering with K-means (k=5)**
-   - Cluster similar dongs based on thermal characteristics
-5. **Visualization**
-   - Choropleth of SNI, t-SNE projection, radar charts
+4. **K-means Clustering (k=5)**
+   - Cluster dongs by thermal profile
+5. **Site Recommendation**
+   - Visual overlay with road, crosswalk, and vulnerable population maps
 
 ---
 
-## 🗺️ Key Insights
+## 🏙️ Key Result
 
-- **Top-3 dongs with highest sunshade need:**
-  1. 공항동
-  2. 면목5동
-  3. 한강로동
-- **Target region selected:** **면목5동**, due to high temperature and residential exposure
-- **Final Recommendation:**  
-  5 additional sunshade spots identified in 면목5동 based on pedestrian traffic, shading analysis, and vulnerable population mapping.
+Based on combined temperature data and environmental context, **면목5동** was selected as the most urgent target area for additional sunshades.  
+5 high-priority installation points were identified.
 
 ---
 
-## 🖼️ Visual Examples
+## 🙋 Contact
 
-![Shade Need Index Map](./images/sni_map_example.png)  
-*Each color represents a cluster of dongs with similar LST characteristics.*
-
----
+**Byungseung Kong**  
+Email: xncb135@korea.ac.kr  
