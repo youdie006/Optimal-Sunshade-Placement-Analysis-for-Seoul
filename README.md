@@ -8,7 +8,6 @@ This project aims to reduce the impact of **urban heat islands** by prioritizing
 ## 📌 Project Overview
 
 - **Title:** Optimal Sunshade Placement Analysis for Seoul 
-- **Team:** 공병승, 이문교, 임윤영  
 - **Date:** June 2025 (Project for the 'Data Visualitzation' graduate course)
 
 With record-breaking heatwaves becoming more frequent, protecting heat-vulnerable populations through smart infrastructure planning (e.g., sunshades) is becoming increasingly vital.  
